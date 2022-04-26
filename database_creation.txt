@@ -1,0 +1,11 @@
+CREATE DATABASE Activity;
+
+Use Activity;
+
+CREATE TABLE Visitors (
+ id int(11) NOT NULL,
+ ip_address varchar(50) NOT NULL,
+ arrival_time datetime NOT NULL,
+ quiz_score int(1) NULL,
+ PRIMARY KEY (id)
+);
