@@ -1,7 +1,7 @@
 <?php
-    $host = "localhost";
-    $user = "root";
-    $password = "mysql";
+    $host = "greenwichteaburning.database.windows.net";
+    $user = "daniel";
+    $password = "St0ckt0n";
     $db = "activity";
     $mysql = @new mysqli($host, $user, $password);
     $connected = False;

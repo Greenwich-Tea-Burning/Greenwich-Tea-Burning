@@ -43,13 +43,13 @@
             if (mysqli_num_rows($result) > 0)
             {
                 echo "<table><tr><th style='width: 20px;'>Visitor</th>";
-                echo "<th style='width: 120px;'>Arrival Time</th>";
+                echo "<th style='width: 160px;'>Arrival Time</th>";
                 echo "<th style='width: 120px;'>Quiz Score</th>";
                 echo "<th style='width: 120px;'>User Name</th>";
                 echo "<th>User Activity</th></tr>";
                 while($row = mysqli_fetch_assoc($result))
                 {
-                    $arrival_time = substr($row['arrival_time'], 5, 11);
+                    $arrival_time = $row['arrival_time'];
                     $row['quiz_score'] = ($row['quiz_score'] == '') ? "-" : $row['quiz_score'];
                     $row['user_name'] = ($row['user_name'] == '') ? "-" : $row['user_name'];
                     echo "<tr><td style='text-align: center;'>{$row['id']}</td>";
