@@ -22464,13 +22464,15 @@
         "[5_10_12 1011 PM Voice Memo] [] []",
         "[6278] [] []",
     ];
-    function write_random_song()
+    function write_random_song(event=None)
     {
         let index = Math.floor(Math.random() * songs.length);
         document.body.innerHTML = `<h1 style="font-size: 80px">${songs[index]}</h1>`;
     }
     window.onload = write_random_song;
     window.onclick = write_random_song;
+    document.body.addEventListener('touchstart', write_random_song, false)
+
 
 </script>
 </html>
