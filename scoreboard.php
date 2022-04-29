@@ -40,7 +40,19 @@ if (!isset($_SESSION['id']))
         }
 
 
-        $sql = "UPDATE Visitors SET user_name='{$_GET['name']}' WHERE id={$_SESSION['id']};";
+        $unfiltered_name = $_GET['name'];
+        $name = "";
+
+        for ($i = 0; $i <mb_strlen($unfiltered_name); $i++)
+        {
+            if (ctype_alnum($unfiltered_name[$i]))
+            {
+                $name = "{$name}{$unfiltered_name[$i]}";
+            }
+        }
+
+
+        $sql = "UPDATE Visitors SET user_name='{$name}' WHERE id={$_SESSION['id']};";
         if (!mysqli_query($mysql, $sql))
         {
             echo "Update failed";
