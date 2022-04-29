@@ -1,5 +1,6 @@
 <?php
     $host = "greenwichteaburning.database.windows.net";
+//     $host = 'localhost';
     $user = "daniel";
     $password = "St0ckt0n";
     $db = "activity";
