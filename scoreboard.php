@@ -45,7 +45,7 @@ if (!isset($_SESSION['id']))
 
         for ($i = 0; $i <mb_strlen($unfiltered_name); $i++)
         {
-            if (ctype_alnum($unfiltered_name[$i]) or strcmp($unfilered_name[$i], ' ') == 0)
+            if (ctype_alnum($unfiltered_name[$i]) or strcmp($unfiltered_name[$i], ' ') == 0)
             {
                 $name = "{$name}{$unfiltered_name[$i]}";
             }
